@@ -30,10 +30,10 @@ def get_words():
 @app.route('/story')
 def write_story():
 	"""takes input from querystring and 'writes' the story by inserting the user-entered words into the story"""
-
-	answers = {}
-	for query in request.args:
-		answers[query] = request.args[query]
+	chosen_story = make_story_from_class("Once Upon a Time")
+	# answers = {}
+	# for query in request.args:
+	# 	answers[query] = request.args[query]
 	finished_story = chosen_story.generate(answers)
 
 	return render_template("story.html", finished_story = finished_story)

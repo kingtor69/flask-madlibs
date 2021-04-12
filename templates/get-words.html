@@ -7,7 +7,7 @@
     <div class="col-md-6 justify-content-center">
       <div class="card secondary">
         <h4 class="card-title text-center">Please enter a word to match each prompt.</h4>
-        <form action="/story" class="card-body">
+        <form action="/story/{{title}}" class="card-body">
           <table>
             {% for i in range(num_of_prompts) %}
             <tr>
