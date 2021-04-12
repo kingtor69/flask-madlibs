@@ -1,0 +1,726 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"new",
+				"new_line"
+			],
+			[
+				"inline",
+				"inline-block\tdisplay"
+			],
+			[
+				"scale",
+				"scale3d()\ttransform"
+			],
+			[
+				"answer",
+				"answersPerCategory"
+			],
+			[
+				"bg-",
+				"background-color"
+			],
+			[
+				"sav",
+				"savePlayerObjects"
+			],
+			[
+				"padding",
+				"padding-bottom\tproperty"
+			],
+			[
+				"ali",
+				"align-content\tproperty"
+			],
+			[
+				"inARowU",
+				"inARowUpLeft"
+			],
+			[
+				"ele",
+				"getElementById"
+			],
+			[
+				"col",
+				"colorClasses"
+			],
+			[
+				"j",
+				"jasmine"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "from flask import Flask, request, render_template\nfrom random import randint, choice, sample\nfrom flask_debugtoolbar import DebugToolbarExtension\nfrom stories import *\n\napp = Flask(__name__)\napp.config['SECRET_KEY'] = \"thecheddarthebetter1969\"\n\ndebug = DebugToolbarExtension(app)\n\n@app.route('/')\ndef get_words():\n\t\"\"\"prepare prompts and return homepage\"\"\"\n\tprompts = []\n\tfor prompt in story.prompts:\n\t\tprompts.append(prompt.replace('_', ' '))\n\n\treturn render_template(\"get-words.html\", prompts = prompts, num_of_prompts = len(prompts))\n\n@app.story('/story')\ndef write_story():\n\t\"\"\"takes input from querystring and 'writes' the story by inserting the user-entered words into the story\"\"\"\n\t# for i in range(len(story.prompts)):\n\n\treturn render_template(\"write-story.html\")\n\n\n",
+			"file": "/home/kingtor/Dropbox/odnt/github-public-repos/flask-madlibs/app.py",
+			"file_size": 726,
+			"file_write_time": 132626845424575340,
+			"settings":
+			{
+				"buffer_size": 774,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/kingtor/Dropbox/odnt/github-public-repos/flask-madlibs/stories.py",
+			"settings":
+			{
+				"buffer_size": 1150,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/kingtor/Dropbox/odnt/github-public-repos/flask-madlibs/static/style.css",
+			"settings":
+			{
+				"buffer_size": 51,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "style.css"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"live",
+				"Live Server: Start"
+			],
+			[
+				"liv",
+				"Live Server: Start"
+			],
+			[
+				"package",
+				"Package Control: Disable Package"
+			],
+			[
+				"pret",
+				"HTMLPrettify: Set Prettify Preferences"
+			],
+			[
+				"html",
+				"HTML: Encode Special Characters"
+			],
+			[
+				"LIVE",
+				"Live Server: Start"
+			],
+			[
+				"color",
+				"Color Helper: Contrast"
+			],
+			[
+				"lie",
+				"Live Server: Start"
+			],
+			[
+				"lives",
+				"Live Server: Stop"
+			],
+			[
+				"liveser",
+				"Live Server: Stop"
+			],
+			[
+				"liver",
+				"Live Server: Start"
+			],
+			[
+				"live ",
+				"Live Server: Start"
+			],
+			[
+				"liveserver",
+				"Live Server: Start"
+			],
+			[
+				"live ser",
+				"Live Server: Start"
+			],
+			[
+				"stop",
+				"Live Server: Stop"
+			],
+			[
+				"live server",
+				"Live Server: Start"
+			],
+			[
+				"start",
+				"Live Server: Start"
+			],
+			[
+				"PACKAGE",
+				"Package Control: List Packages"
+			],
+			[
+				"pacakge",
+				"Package Control: Disable Package"
+			],
+			[
+				"package control: dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"package control: list",
+				"Package Control: List Packages"
+			],
+			[
+				"pack",
+				"Package Control: Enable Package"
+			],
+			[
+				"package control: di",
+				"Package Control: Disable Package"
+			],
+			[
+				"package control",
+				"Package Control: List Packages"
+			],
+			[
+				"package disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"package ",
+				"Preferences: Browse Packages"
+			],
+			[
+				"entiti",
+				"StringEncode: HTML Entitize"
+			],
+			[
+				"package insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Preferences: Live",
+				"Preferences: Live Server Settings"
+			],
+			[
+				"package remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"packag re",
+				"Package Control: Remove Channel"
+			],
+			[
+				"package install",
+				"Package Control: Install Package"
+			],
+			[
+				"package:",
+				"Package Control: Install Package"
+			],
+			[
+				"package in",
+				"Package Control: Install Package"
+			],
+			[
+				"package re",
+				"Package Control: Remove Package"
+			],
+			[
+				"prett",
+				"JsPrettier: Format Code"
+			],
+			[
+				"install package",
+				"Package Control: Install Package"
+			],
+			[
+				"encode",
+				"HTML: Encode Special Characters"
+			],
+			[
+				"sort",
+				"Sort Lines"
+			],
+			[
+				"rever",
+				"Permute Lines: Reverse"
+			],
+			[
+				"conver",
+				"Convert Case: Swap Case"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 162.0,
+		"history":
+		[
+			"live_server_start",
+			"clear ()",
+			"clear"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/kingtor/Dropbox/odnt/github-public-repos/flask-madlibs",
+		"/home/kingtor/Dropbox/odnt/github-public-repos/flask-madlibs/static",
+		"/home/kingtor/Dropbox/odnt/github-public-repos/flask-madlibs/templates",
+		"/home/kingtor/Dropbox/odnt/github-public-repos/flask-madlibs/venv"
+	],
+	"file_history":
+	[
+		"/home/kingtor/Dropbox/odnt/github-public-repos/flask-madlibs/templates/base.html",
+		"/home/kingtor/Dropbox/odnt/github-public-repos/flask-madlibs/templates/get_words.html",
+		"/home/kingtor/Dropbox/odnt/github-public-repos/flask-madlibs/venv/templates/home.html",
+		"/home/kingtor/Dropbox/odnt/github-public-repos/flask-madlibs/venv/templates/base.html",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/00-notes-template/navbar-to-add.html",
+		"/home/kingtor/Dropbox/odnt/github-public-repos/flask-madlibs/venv/templates/template.html",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/19-Flask-fundamentals/app.py",
+		"/home/kingtor/Dropbox/odnt/github-public-repos/flask-madlibs/requirement.txt",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/19-Flask-fundamentals/19-notes.html",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/19-Flask-fundamentals/templates/form2.html",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/19-Flask-fundamentals/templates/greet2.html",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/19-Flask-fundamentals/templates/app.js",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/19-Flask-fundamentals/app.js",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/19-Flask-fundamentals/templates/spell_word.html",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/19-Flask-fundamentals/templates/lucky.html",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/00-notes-template/notes-template.html",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_4_8-Python-OOP-exercise/python-oo-practice/wordfinder.py",
+		"/home/kingtor/Dropbox/odnt/code-for-abq/tor-personal/code-for-abq-april2021-meetup.md",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/fs_3_three_odd_numbers/three_odd_numbers.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/fs_2_valid_parentheses/valid_parentheses.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/fs_1_is_odd_string/is_odd_string.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/39_find_greater_numbers/find_greater_numbers.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/10_frequency/frequency.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/38_min_max_key_in_dictionary/min_max_key_in_dictionary.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/37_sum_up_diagonals/sum_up_diagonals.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/35_two_oldest_ages/two_oldest_ages.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/36_find_the_duplicate/find_the_duplicate.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/34_same_frequency/same_frequency.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/34_same_frequency/same_freq.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/33_sum_range/sum_range.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/32_two_list_dictionary/two_list_dictionary.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/31_truncate/truncate.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/30_repeat/repeat.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/29_includes/includes.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/28_find_factors/find_factors.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/27_titleize/titleize.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/26_vowel_count/vowel_count.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/26_vowel_count/delete_me.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/25_sum_pairs/sum_pairs.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/24_remove_every_other/remove_every_other.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/24_remove_every_other/remove_every_other_wtf.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/23_list_check/list_check.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/22_sum_floats/sum_floats_wtf.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/22_sum_floats/sum_floats.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/21_extract_full_name/extract_full_name.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/20_triple_and_filter/triple_and_filter.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/19_friend_date/friend_date.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/18_calculate/calculate.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/17_mode/mode.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/16_partition/partition.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/15_intersection/intersection.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/14_compact/compact.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/13_capitalize/capitalize.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/12_multiply_even_numbers/multiply_even_numbers.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/12_multiply_even_numbers/multiply_even_numbers_wtf.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/11_flip_case/flip_case.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/07_multiple_letter_count/multiple_letter_count.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/07_multiple_letter_count/multiple_letter_count_wtf.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/09_is_palindrome/is_palindrome.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/08_list_manipulation/list_manipulation.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/06_single_letter_count/single_letter_count.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/05_reverse_string/reverse_string.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_2_20-Python-ds-practice/04_number_compare/number_compare.py",
+		"/home/kingtor/.config/sublime-text-3/Packages/User/SublimePythonTidy/PythonTidy/README.rst",
+		"/home/kingtor/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-I/06-office-hours-git/officehours-git-notes.md",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-fundamentals/18-Python-notes.html",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-exercises/18_1_27-Python-syntax-exercise/any7.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18_1_27-Python-syntax-exercise/words.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18_1_27-Python-syntax-exercise/index.html",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18_1_27-Python-syntax-exercise/in_range.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18_1_27-Python-syntax-exercise/any7.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18_1_27-Python-syntax-exercise/convert.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18_1_27-Python-syntax-exercise/count_up.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18_1_27-Python-syntax-exercise/sum.py",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/SECTION-II/18-Python-fundamentals/test.html",
+		"/home/kingtor/.config/sublime-text-3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc.defaults.json",
+		"/home/kingtor/Dropbox/odnt/github-public-repos/connect-four/12-connect-four-oo/index.html",
+		"/home/kingtor/Dropbox/odnt/github-public-repos/connect-four/index.html",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/# mentor call with Ashir - 210325-1600mdt.md",
+		"/home/kingtor/Dropbox/odnt/sb-sect1-projects/16-hackorsnooze/app.js",
+		"/home/kingtor/Dropbox/odnt/sb-sect1-projects/16-hackorsnooze/scratch.html",
+		"/home/kingtor/Dropbox/odnt/sb-sect1-projects/16-hackorsnooze/hackorsnooze-css/stories.css",
+		"/home/kingtor/Dropbox/odnt/sb-sect1-projects/16-hackorsnooze/hackorsnooze-css/nav.css",
+		"/home/kingtor/Dropbox/odnt/sb-sect1-projects/16-hackorsnooze/hackorsnooze-css/site.css",
+		"/home/kingtor/Dropbox/odnt/sb-sect1-projects/16-hackorsnooze/hackorsnooze-css/user.css",
+		"/home/kingtor/Dropbox/odnt/sb-coursework-notes/16-hackorsnooze-notes/notes-template.html",
+		"/home/kingtor/Dropbox/odnt/sb-sect1-projects/16-hackorsnooze/scratch.js",
+		"/home/kingtor/Dropbox/odnt/sb-sect1-projects/16-hackorsnooze/style.css",
+		"/home/kingtor/Dropbox/odnt/sb-sect1-projects/16-hackorsnooze/starter-css/nav.css",
+		"/home/kingtor/Dropbox/odnt/sb-sect1-projects/16-hackorsnooze/hack-or-snooze-ajax-api/index.html",
+		"/home/kingtor/Dropbox/odnt/sb-sect1-projects/15-Jeopardy-assessment/index.html",
+		"/home/kingtor/Dropbox/odnt/filthyprojectses/15-Jeopardy-assessment/index.html",
+		"/home/kingtor/Dropbox/odnt/sb-sect1-projects/project-template/index.html",
+		"/home/kingtor/Dropbox/odnt/sb-sect1-projects/15-Jeopardy-assessment/scratch.js",
+		"/home/kingtor/Dropbox/odnt/sb-sect1-projects/15-Jeopardy-assessment/scratch.css",
+		"/home/kingtor/Dropbox/odnt/sb-sect1-projects/15-Jeopardy-assessment/scratch.html",
+		"/home/kingtor/Dropbox/odnt/sb-sect1-projects/15-Jeopardy-assessment/jeopardy.test.js",
+		"/home/kingtor/Dropbox/odnt/filthyprojectses/15-Jeopardy-assessment/jeopardy.test.js",
+		"/home/kingtor/Dropbox/odnt/filthyprojectses/15-Jeopardy-assessment/jeopardy.css",
+		"/home/kingtor/Dropbox/odnt/sb-sect1-projects/README.md",
+		"/home/kingtor/Dropbox/odnt/filthyprojectses/15-Jeopardy-assessment/section-1/jeopardy/index.html",
+		"/home/kingtor/Dropbox/odnt/filthyprojectses/14_3_14-AJAX-API-exercise/index.html",
+		"/home/kingtor/Dropbox/odnt/filthyprojectses/14_3_14-AJAX-API-exercise/apis-tvmaze/tvmaze.js",
+		"/home/kingtor/Dropbox/odnt/filthyprojectses/09-elevator-pitch/elevatorPitch.md",
+		"/home/kingtor/Dropbox/odnt/coursework-notes/14-howTheWebWorks-AJAX/hackorsnooze.html",
+		"/home/kingtor/Dropbox/odnt/filthyprojectses/project-template/index.html",
+		"/home/kingtor/Dropbox/odnt/coursework-notes/14-howTheWebWorks-AJAX/app.js",
+		"/home/kingtor/Dropbox/odnt/coursework-notes/00-notes-template/notes-template.html",
+		"/home/kingtor/Dropbox/odnt/coursework-notes/notes-style.css",
+		"/home/kingtor/Dropbox/odnt/coursework-notes/14-howTheWebWorks-AJAX/style.css",
+		"/home/kingtor/Dropbox/odnt/coursework-notes/14-howTheWebWorks-AJAX/hearkitty.html",
+		"/home/kingtor/Dropbox/odnt/coursework-notes/14-howTheWebWorks-AJAX/14-notes.html",
+		"/home/kingtor/Dropbox/odnt/filthyprojectses/13_2-Bootstrap-exercises/index.html",
+		"/home/kingtor/Dropbox/odnt/coursework-notes/notes-template.html",
+		"/home/kingtor/Dropbox/odnt/coursework-notes/13-jQuery-Bootstrap/app-tor.js",
+		"/home/kingtor/Dropbox/odnt/coursework-notes/13-jQuery-Bootstrap/style.css",
+		"/home/kingtor/Dropbox/odnt/coursework-notes/13-jQuery-Bootstrap/bootstrap-questions.html",
+		"/home/kingtor/Dropbox/odnt/coursework-notes/13-jQuery-Bootstrap/13-18-theming-bootstrap.html",
+		"/home/kingtor/Dropbox/odnt/coursework-notes/13-jQuery-Bootstrap/noInsta.html",
+		"/home/kingtor/Dropbox/odnt/coursework-notes/13-jQuery-Bootstrap/bootstrap-demo/17_JSComponents.html",
+		"/home/kingtor/Dropbox/odnt/coursework-notes/13-jQuery-Bootstrap/bootstrap-demo/18_ThemingBootstrap.html",
+		"/home/kingtor/Dropbox/odnt/coursework-notes/13-jQuery-Bootstrap/themestr-du-jour.css",
+		"/home/kingtor/Dropbox/odnt/coursework-notes/13-jQuery-Bootstrap/13-jQuery-Bootstrap-notes.html",
+		"/home/kingtor/Dropbox/odnt/coursework-notes/13-jQuery-Bootstrap/theme_1615511482812.css",
+		"/home/kingtor/Dropbox/odnt/coursework-notes/13-jQuery-Bootstrap/13-18-theming-bootstrap",
+		"/home/kingtor/Dropbox/odnt/coursework-notes/18-theming-bootstrap.html",
+		"/home/kingtor/Dropbox/odnt/coursework-notes/13-jQuery-Bootstrap/bootstrap-demo-pages/18_ThemingBootstrap.html"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/kingtor/Dropbox/odnt/github-public-repos/flask-madlibs/app.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 774,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								474,
+								474
+							]
+						],
+						"settings":
+						{
+							"color_helper.scan":
+							{
+								"allow_scanning": false,
+								"color_class":
+								[
+									{
+										"class": "css-level-4",
+										"scopes": ""
+									}
+								],
+								"color_trigger": "(?i)(?:\\b(?<![-#&$])(?:color|hsla?|lch|lab|hwb|rgba?)\\(|\\b(?<![-#&$])[\\w]{3,}(?![(-])\\b|(?<![&])#)",
+								"current_ext": ".py",
+								"current_syntax": "Python/Python",
+								"enabled": true,
+								"last_updated": 1618202149.38,
+								"scanning": "-comment -string"
+							},
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"word_wrap": true,
+							"wrap_width": 0
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/kingtor/Dropbox/odnt/github-public-repos/flask-madlibs/stories.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1150,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1086,
+								1086
+							]
+						],
+						"settings":
+						{
+							"color_helper.scan":
+							{
+								"allow_scanning": false,
+								"color_class":
+								[
+									{
+										"class": "css-level-4",
+										"scopes": ""
+									}
+								],
+								"color_trigger": "(?i)(?:\\b(?<![-#&$])(?:color|hsla?|lch|lab|hwb|rgba?)\\(|\\b(?<![-#&$])[\\w]{3,}(?![(-])\\b|(?<![&])#)",
+								"current_ext": ".py",
+								"current_syntax": "Python/Python",
+								"enabled": true,
+								"last_updated": 1618202149.38,
+								"scanning": "-comment -string"
+							},
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 2,
+					"file": "/home/kingtor/Dropbox/odnt/github-public-repos/flask-madlibs/static/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 51,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								49,
+								49
+							]
+						],
+						"settings":
+						{
+							"auto_name": "style.css",
+							"color_helper.box_height": 17,
+							"color_helper.color_scheme": "Packages/OLED Color Scheme/OLED.sublime-color-scheme",
+							"color_helper.refresh": false,
+							"color_helper.scan":
+							{
+								"allow_scanning": true,
+								"color_class":
+								[
+									{
+										"class": "css-level-4",
+										"scopes": ""
+									}
+								],
+								"color_trigger": "(?i)(?:\\b(?<![-#&$])(?:color|hsla?|lch|lab|hwb|rgba?)\\(|\\b(?<![-#&$])[\\w]{3,}(?![(-])\\b|(?<![&])#)",
+								"current_ext": ".css",
+								"current_syntax": "CSS/CSS",
+								"enabled": true,
+								"last_updated": 1618202149.38,
+								"scanning": "meta.declaration-list.css -support.type.property-name.css -comment -string,meta.property-value.css -comment -string,meta.value.css -comment -string,meta.tag.inline.any.html string.quoted -constant.character.entity.html,meta.tag.any.html meta.attribute-with-value.style.html"
+							},
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.457300206002,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 120.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"output.nodejs":
+	{
+		"height": 120.0
+	},
+	"pinned_build_system": "",
+	"project": "madlibs.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"notes",
+				"10-ES2015/ES2015-notes.html"
+			],
+			[
+				"index",
+				"index.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 1,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 218.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

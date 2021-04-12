@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}madlibs{% endblock %}
+{% block header %}madlibs app made with Flask by Tor Kingdon{% endblock %}
+{% block content %}
+<div class="container">
+  <div class="card secondary">
+    <h2 class="card-title text-center">Here is your story:</h2>
+    <p class="card-body">{{finished_story}}</p>
+    </table>
+  </div>
+</div>
+{% endblock %}
