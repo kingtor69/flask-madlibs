@@ -13,14 +13,8 @@
         <form action="/get-words" class="card-body">
           <select name="story" id="story">
             <option value="random">choose for me</option>
-            {% for i in range(num_stories) %}
-            <option value="story{{i}}">
-              {% if stories[i].title: %}
-              {{stories[i].title}}
-              {% else %}
-              story{{i}}
-              {% endif %}
-            </option>
+            {% for title in titles %}
+            <option value="{{title}}">{{title}}</option>
             {% endfor %}
           </select>
           <button class="btn btn-block btn-secondary">let's do this</button>

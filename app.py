@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template
 from random import randint, choice, sample
 from flask_debugtoolbar import DebugToolbarExtension
-from stories import Story, storylist
+from stories import Story, storylist, make_story_from_class
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "thecheddarthebetter1969"
@@ -10,16 +10,22 @@ debug = DebugToolbarExtension(app)
 
 @app.route('/')
 def pick_story():
-	return render_template("pick-story.html", stories = storylist, num_stories = len(storylist))
+	titles = []
+	for story in storylist:
+		for key in story:
+			titles.append(key)
+
+	return render_template("pick-story.html", titles = titles)
 
 @app.route('/get-words')
 def get_words():
 	"""prepare prompts and return homepage"""
+	chosen_story = make_story_from_class(request.args["story"])
 	prompts = []
-	for prompt in story.prompts:
+	for prompt in chosen_story.prompts:
 		prompts.append(prompt.replace('_', ' '))
 
-	return render_template("get-words.html", prompts = prompts, key_prompts = story.prompts, num_of_prompts = len(prompts))
+	return render_template("get-words.html", prompts = prompts, key_prompts = chosen_story.prompts, num_of_prompts = len(prompts))
 
 @app.route('/story')
 def write_story():
@@ -28,7 +34,7 @@ def write_story():
 	answers = {}
 	for query in request.args:
 		answers[query] = request.args[query]
-	finished_story = story.generate(answers)
+	finished_story = chosen_story.generate(answers)
 
 	return render_template("story.html", finished_story = finished_story)
 

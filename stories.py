@@ -40,8 +40,7 @@ class Story:
 storylist = [
     {"Once Upon a Time": 
         (["place", "noun", "verb", "adjective", "plural_noun"], 
-        """Once upon a time in a long-ago {place}, there lived a
-       large {adjective} {noun}. It loved to {verb} {plural_noun}.""", "Once Upon a Time" 
+        """Once upon a time in a long-ago {place}, there lived a large {adjective} {noun}. It loved to {verb} {plural_noun}.""", "Once Upon a Time" 
         )
     },
     {"The Lonliest":  
@@ -57,3 +56,9 @@ storylist = [
        )
     }
 ]
+
+def make_story_from_class(chosen_key):
+    for story in storylist:
+        if story.get(chosen_key):
+            chosen_story = story[chosen_key]
+    return Story(chosen_story)
