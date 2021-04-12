@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template
 from random import randint, choice, sample
 from flask_debugtoolbar import DebugToolbarExtension
-from stories import *
+from stories import storylist
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "thecheddarthebetter1969"
@@ -9,6 +9,11 @@ app.config['SECRET_KEY'] = "thecheddarthebetter1969"
 debug = DebugToolbarExtension(app)
 
 @app.route('/')
+def pick_story():
+
+	return render_template("pick-story.html", stories = storylist, num_stories = len(storylist))
+
+@app.route('/get-words')
 def get_words():
 	"""prepare prompts and return homepage"""
 	prompts = []
