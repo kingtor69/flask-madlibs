@@ -4,20 +4,20 @@
 class Story:
     """Madlibs story.
 
-    # I didn't read this starter code very carefully and 
-    # accidentally rewrote generate() in app.py write_story()
-    # To  make a story, pass a list of prompts, and the text
-    # of the template.
+    I didn't read this starter code very carefully and 
+    accidentally rewrote generate() in app.py write_story()
+    To  make a story, pass a list of prompts, and the text
+    of the template.
 
-    #     >>> s = Story(["noun", "verb"],
-    #     ...     "I love to {verb} a good {noun}.")
+        >>> s = Story(["noun", "verb"],
+        ...     "I love to {verb} a good {noun}.")
 
-    # To generate text from a story, pass in a dictionary-like thing
-    # of {prompt: answer, promp:answer):
+    To generate text from a story, pass in a dictionary-like thing
+    of {prompt: answer, promp:answer):
 
-    #     >>> ans = {"verb": "eat", "noun": "mango"}
-    #     >>> s.generate(ans)
-    #     'I love to eat a good mango.'
+        >>> ans = {"verb": "eat", "noun": "mango"}
+        >>> s.generate(ans)
+        'I love to eat a good mango.'
     """
 
     def __init__(self, words, text, title=""):
@@ -27,15 +27,15 @@ class Story:
         self.template = text
         self.title = title
 
-    # def generate(self, answers):
-    #     """Substitute answers into text."""
+    def generate(self, answers):
+        """Substitute answers into text."""
 
-    #     text = self.template
+        text = self.template
 
-    #     for (key, val) in answers.items():
-    #         text = text.replace("{" + key + "}", val)
+        for (key, val) in answers.items():
+            text = text.replace("{" + key + "}", val)
 
-    #     return text
+        return text
 
 
 # Here's a story to get you started

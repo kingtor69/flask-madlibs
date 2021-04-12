@@ -1,7 +1,6 @@
 from flask import Flask, request, render_template
-from random import randint, choice, sample
 from flask_debugtoolbar import DebugToolbarExtension
-from stories import storylist
+from stories import storylist, Story
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "thecheddarthebetter1969"
@@ -10,12 +9,15 @@ debug = DebugToolbarExtension(app)
 
 @app.route('/')
 def pick_story():
-
 	return render_template("pick-story.html", stories = storylist, num_stories = len(storylist))
 
 @app.route('/get-words')
 def get_words():
 	"""prepare prompts and return homepage"""
+	if request.args['story'] == "choose for me":
+		story = Story(choice(storylist))
+	else: 
+		story = Story(request.args['story'])
 	prompts = []
 	for prompt in story.prompts:
 		prompts.append(prompt.replace('_', ' '))
@@ -25,21 +27,22 @@ def get_words():
 @app.route('/story')
 def write_story():
 	"""takes input from querystring and 'writes' the story by inserting the user-entered words into the story"""
-	key = ""
-	finished_story = ""
-	in_curlies = False
-	for char in story.template:
-		if in_curlies == True:
-			if char == "}":
-				finished_story += request.args[key]
-				key = ""
-				in_curlies = False
-			else:
-				key += char
-		elif char == "{":
-			in_curlies = True
-		else:
-			finished_story += char
+	# key = ""
+	answer = {"noun": "bonehead"}
+	finished_story = generate(answers)
+	# in_curlies = False
+	# for char in story.template:
+	# 	if in_curlies == True:
+	# 		if char == "}":
+	# 			finished_story += request.args[key]
+	# 			key = ""
+	# 			in_curlies = False
+	# 		else:
+	# 			key += char
+	# 	elif char == "{":
+	# 		in_curlies = True
+	# 	else:
+	# 		finished_story += char
 
 
 	return render_template("story.html", finished_story = finished_story)
