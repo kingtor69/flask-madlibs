@@ -27,6 +27,7 @@ def get_words():
 	if chosen_title == "random":
 		story_dic = choice(storylist)
 		for key in story_dic:
+			chosen_title = key
 			chosen_story = story_dic[key]
 	else:
 		for story in storylist:
@@ -52,7 +53,11 @@ def write_story():
 	for story in storylist:
 		if chosen_title in story:
 			chosen_story = story[chosen_title]
-			return render_template("story.html", finished_story = chosen_story.generate(answers))
+			answers = {}
+			for query in request.args:
+				answers[query] = request.args[query]
+			title_story = chosen_story.generate(answers)
+			return render_template("story.html", title = title_story[0], finished_story = title_story[1])
 	
 	return render_template("error.html", error = "couldn't find the story in write_story.", chosen_story = chosen_story, chosen_title = chosen_title, kicker = "dangit!")
 		

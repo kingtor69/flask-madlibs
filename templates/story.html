@@ -3,10 +3,20 @@
 {% block header %}It&rsquo;s Story Time!{% endblock %}
 {% block content %}
 <div class="container">
-  <div class="card secondary">
-    <h2 class="card-title text-center">Here is your story:</h2>
-    <p class="card-body">{{finished_story}}</p>
-    </table>
+  <div class="row justify-content-md-center">
+    <div class="col-md-6">
+      <div class="card border-primary">
+        <h2 class="card-title text-center bg-success">{{title}}</h2>
+        <p class="card-body">{{finished_story}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-md-center">
+    <div class="col-md-6">
+      <form action="/">
+        <button class="btn btn-outline-success btn-block mt-3">do it again</button>
+      </form>
+    </div>
   </div>
 </div>
 {% endblock %}
