@@ -2,5 +2,7 @@
 
 ## done with Flask
 
-###Tor Kingdon
-###Springboard Software Engineering Career Track
+"further study" is on branch further-study
+
+### Tor Kingdon
+### Springboard Software Engineering Career Track
