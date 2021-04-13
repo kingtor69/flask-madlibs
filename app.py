@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template
 from random import randint, choice, sample
 from flask_debugtoolbar import DebugToolbarExtension
-from stories import Story, storylist, make_story_from_class
+from stories import storylist
 # import stories
 
 app = Flask(__name__)
@@ -22,22 +22,41 @@ def pick_story():
 @app.route('/get-words')
 def get_words():
 	"""prepare prompts and return homepage"""
+	chosen_story = None
 	chosen_title = request.args["story"]
-	# chosen_story = stories.make_story_from_class(chosen_title)
-	chosen_story = make_story_from_class(chosen_title)
+	if chosen_title == "random":
+		story_dic = choice(storylist)
+		for key in story_dic:
+			chosen_story = story_dic[key]
+	else:
+		for story in storylist:
+			if chosen_title in story:
+				chosen_story = story[chosen_title]
+
+	if not chosen_story:
+		return render_template("error.html", error = "never chose a story in get_words.", chosen_story = chosen_story, chosen_title = chosen_title, kicker = "stupid snake language")				
+			
 	prompts = []
 	for prompt in chosen_story.prompts:
 		prompts.append(prompt.replace('_', ' '))
 
-	return render_template("get-words.html", story = chosen_story, prompts = prompts, key_prompts = chosen_story.prompts, num_of_prompts = len(prompts))
+	return render_template("get-words.html", title = chosen_title, prompts = prompts, key_prompts = chosen_story.prompts, num_of_prompts = len(prompts))
 
 @app.route('/story')
 def write_story():
 	"""takes input from querystring and 'writes' the story by inserting the user-entered words into the story"""
-	# from stories import chosen_story
-	# getattr(wtf_object, request.args['key'])
-	finished_story = chosen_story.generate(answers)
+	
+	
+	chosen_story = None
+	chosen_title = request.args["key"]
+	for story in storylist:
+		if chosen_title in story:
+			chosen_story = story[chosen_title]
+			return render_template("story.html", finished_story = chosen_story.generate(answers))
+	
+	return render_template("error.html", error = "couldn't find the story in write_story.", chosen_story = chosen_story, chosen_title = chosen_title, kicker = "dangit!")
+		
+	
 
-	return render_template("story.html", finished_story = finished_story)
 
 

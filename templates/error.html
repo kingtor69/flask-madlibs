@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}oops{% endblock %}
+{% block header %}madlibs error{% endblock %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 justify-content-center">
+      <div class="card warning">
+        <h4 class="card-title text-center">
+          dag nab it, something went wrong
+        </h4>
+        <div class="card_body">
+          <p>{{error}}</p>
+          <p>chosen_story = {{chosen_story}}</p>
+          <p>chosen_title = {{chosen_title}}</p>
+          <p>{{kicker}}</p>
+          <form action="/">
+            <button class="btn btn-block btn-warning">try again</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
